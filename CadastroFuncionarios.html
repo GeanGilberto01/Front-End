@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro de Funcionarios</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form action=http://ec2-15-228-162-229.sa-east-1.compute.amazonaws.com:3000/funcionariosInsert method="post">
+        <div>
+            <H2>Cadastro De Funcionario</H2>
+            <br>
+            <label for="LastName">Ultimo Nome do Funcionario:</label>
+            <input type="text" id="LastName" name="LastName" required/>
+        </div>
+        <br>  
+        <div>
+            <label for="FirstName">Primeiro Nome do Funcionario:</label>
+            <input type="text" id="FirstName" name="FirstName" required/>
+        </div>
+        <br>  
+        <div>
+            <label for="Notes">Descrição  do Funcionario:</label>
+            <input type="text" id="Notes" name="Notes" required/>
+        </div>
+        <br>
+        <div class="button">
+            <button type="submit">Enviar sue Cadastro</button>
+        </div>
+    </form>
+</body>

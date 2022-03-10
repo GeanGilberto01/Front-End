@@ -1,0 +1,27 @@
+<body>
+    <main></main>
+</body>
+<script>
+
+    async function getContent(){
+        try {
+            const response = await fetch('http://localhost:4321/')
+            const data = await response.json()
+            show(data)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    getContent()
+
+    function show(users){
+        let output = ''
+        for(let user of users){
+            output += `<ol>${'ID: '+user.CategoryID+', Nome da Categoria: '+user.CategoryName+', Descrição: '+user.Description}</ol>`
+        }
+
+        document.querySelector('main').innerHTML = output
+    }
+
+</script>
